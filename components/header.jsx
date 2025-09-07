@@ -1,9 +1,20 @@
 import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 
 const Header = () => {
   return (
-    <div>
+    <div className='fixed top-0'>
+        <nav>
+            <Link href="/">
+                <Image src="/logo.png" alt="Logo" width={200} height={60} 
+                    className='cursor-pointer h-12 w-auto object-contain'
+                />
+            </Link>
+        </nav>
+
+
         <SignedOut>
             <SignInButton/>
             <SignUpButton>
