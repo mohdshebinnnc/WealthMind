@@ -77,8 +77,6 @@ export async function getAccountWithTransactions(accountId){
     if(!account) return null;
 
     return {...serializeTransaction(account), transactions:account.transactions.map(serializeTransaction)};
-
-    return {success:true, account:serializeTransaction(account)};
 }
 
 export async function bulkDeleteTransaction(transactionIds){
